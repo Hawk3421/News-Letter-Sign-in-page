@@ -64,18 +64,8 @@ response.id
 }
 // Right back sign in page
 app.post("/fail", function(req, res){
-res.redirect("/")
-})
-
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 3000;
-}
-
-app.listen(port, function() {
-  console.log("Server started succesfully");
+res.redirect("/");
 });
-
 
 //Running the function and catching the errors (if any)
 // ************************THIS IS THE CODE THAT NEEDS TO BE ADDED FOR THE NEXT LESSON*************************
