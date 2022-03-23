@@ -67,6 +67,16 @@ app.post("/fail", function(req, res){
 res.redirect("/")
 })
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+
+app.listen(port, function() {
+  console.log("Server started succesfully");
+});
+
+
 //Running the function and catching the errors (if any)
 // ************************THIS IS THE CODE THAT NEEDS TO BE ADDED FOR THE NEXT LESSON*************************
 // So the catch statement is executed when there is an error so if anything goes wrong the code in the catch code is executed. In the catch block we're sending back the failure page. This means if anything goes wrong send the faliure page
